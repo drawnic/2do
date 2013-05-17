@@ -1,7 +1,8 @@
 2do web app
 ===========
 
-This is a to-do web app, that uses Jquery, JqueryUI, AJAX, CSS, PHP, HTML and CSS
+This is a to-do web app, that uses Jquery, JqueryUI, AJAX, CSS, PHP, HTML and CSS.
+
 What it does?:
 
 - Add a task with a priority number and a due date.
