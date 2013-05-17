@@ -1,0 +1,236 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.4em;
+  background: #eeeeee;
+  color: #333333;
+}
+
+#views {
+	width: 750px;
+	margin: 0 auto 40px auto;
+	background: white;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+	border-radius: 0 0 5px 5px;
+}
+
+#tasks {
+  padding: 20px;
+}
+
+#tasks h1 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 0 10px 0;
+}
+
+#tasks input[type="text"] {
+  width: 400px;
+  font-size: 22px;
+  font-family: inherit;
+  line-height: 1.4em;
+  border: 0;
+  outline: none;
+  padding: 6px;
+  border: 1px solid #999999;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+}
+#tasks input[type="date"] {
+  width: 120px;
+  font-size: 14px;
+  font-family: inherit;
+  line-height: 1.4em;
+  border: 0;
+  outline: none;
+  padding: 6px;
+  border: 1px solid #999999;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+}
+#tasks input[type="number"] {
+  width: 35px;
+  font-size: 14px;
+  font-family: inherit;
+  line-height: 1.4em;
+  border: 0;
+  outline: none;
+  padding: 6px;
+  border: 1px solid #999999;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+}
+#tasks button {
+  width: 80px;
+  font-size: 24px;
+  font-family: inherit;
+  line-height: 1.4em;
+  border: 0;
+  outline: none;
+  padding: 6px;
+  border: 1px solid #999999;
+  border-radius:5px;
+  background-color:#66CC00;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+}
+
+.cancell {
+  float:right;
+  margin-right:20px;
+  width: 20px;
+  height:20px;
+  background: url(../img/Cancel.png) no-repeat center center;
+}
+
+#tasks input::-webkit-input-placeholder {
+  font-style: italic;
+}
+
+#tasks .items {
+  margin: 10px 0;
+  list-style: none;
+}
+
+#tasks .item {
+  padding: 15px 20px 15px 0;
+  position: relative;
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+}
+
+#tasks .item.done span {
+  color: #777777;
+  text-decoration: line-through;
+}
+.done {
+  color: #777777;
+  text-decoration: line-through;  
+}
+#tasks .item .editar {
+  float: right;
+  margin: auto auto auto 8px;
+  width:30px;
+  height:20px;
+  background: url(../img/edit.png) no-repeat center center;
+}
+
+#form_editar{
+  position: absolute;
+  margin: 20px auto auto 50px;
+  padding-top: 40px;
+  padding-left: 20px;
+  text-align: center;
+  display: none;
+  width: 520px;
+  height: 160px;
+  background: #ccc;
+  border: 1px solid #aaa;
+  z-index: 100;
+  border-radius:5px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+}
+
+.id {
+  visibility:hidden;
+  display: none;
+}
+
+#accion {
+  display:none;
+}
+
+#tasks .duedate {
+  width:auto;
+  padding-left:3px;
+  padding-right:3px;
+  float:right;
+  font-family: inherit;
+  line-height: 1.4em;
+  font-size:14px;
+  border: 1px solid #999999;
+  border-radius:3px;
+  background-color:#CFFF9F;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+}
+
+#tasks .priority {
+  margin: auto auto auto 5px;
+  padding-left: 3px;
+  padding-right: 3px;
+  width:auto;
+  float:right;
+  font-family: inherit;
+  line-height: 1.4em;
+  font-size:14px;
+  border: 1px solid #999999;
+  border-radius:3px;
+  background-color:#F5D76B;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+}
+
+#tasks .item .destroy {
+  position: absolute;
+  right: 10px;
+  top: 16px;
+  display: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+ // background: url(../images/destroy.png) no-repeat center center;
+}
+
+#tasks .item:hover .destroy {
+  display: block;
+}
+
+#tasks .item .edit { display: none; }
+#tasks .item.editing .edit { display: block; }
+#tasks .item.editing .view { display: none; }
+
+#tasks footer {
+  display: block;
+  margin: 20px -20px -20px -20px;
+  overflow: hidden;
+  
+  color: #555555;
+  background: #f4fce8;
+  border-top: 1px solid #ededed;
+  padding: 0 20px;
+  line-height: 36px;
+  border-radius: 0 0 5px 5px;
+}
+
+#tasks .clear {
+  display: block;
+  float: right;
+  line-height: 20px;
+  text-decoration: none;
+  
+  background: rgba(0, 0, 0, 0.1);
+  color: #555555;
+  font-size: 11px;
+  margin-top: 8px;
+  padding: 0 10px 1px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 0; 
+  
+  cursor: pointer;
+}
+
+#tasks .clear:hover {
+  background: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0 0;
+}
+
+#tasks .clear:active {
+  position: relative;
+  top: 1px;
+}
+
+#tasks .count span {
+  font-weight: bold;
+}
+

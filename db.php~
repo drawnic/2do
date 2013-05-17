@@ -1,0 +1,6 @@
+<?php
+
+$conn = mysql_connect('127.0.0.1:5466','w_2do','cosobito');
+$db = mysql_select_db('2do');
+
+?>

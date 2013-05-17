@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>2do</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8">
+
+
+
+<style type="text/css">
+<!--
+.style1 {color: #66CC00}
+-->
+</style>
+
+</head>
+
+<body>
+
+  <div id="views">
+    <div id="tasks">
+      <h1>2<span class="style1">do</span></h1>
+      
+      <form id="insertar" action="2do.php" method="post">
+        <input type="text" name="accion" value="insertar" style="display:none" />
+        <input type="text" placeholder="What needs to be done?" name="new_task"/>
+        <input type="date" name="due_date" />
+        <input type="number" name="priority" min="1" max="10" />
+        <button id="sub">add</button>
+      </form>
+      
+      <form id="form_editar" action="2do.php" method="post">
+         <input type="text" name="taskid" id="tid" style="display:none" />
+         <input type="text" name="accion" value="actualizar" style="display:none" />
+         <div class="cancell"></div>
+         <input type="text" name="upd_new_task" id="edit_cont" />
+         <input type="date" name="upd_due_date" id="edit_dd "/>
+         <input type="number" name="upd_priority" min="1" max="10" id="edit_pri" />
+         <button id="sub_upd">save</button>
+      </form> 
+      
+      <div class="items"></div>
+      
+      <footer>
+        <a class="clear">Clear completed</a>
+        <div class="count"><span class="countVal"></span> order by: <a id="ord_by_pri"> priority </a> | <a id="ord_by_dd"> due-date </a></div>
+      </footer>
+    </div>
+  </div>
+<span id="result"></span>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+<script type="text/javascript" src="2do.js"></script>
+</body>
+</html>
+
