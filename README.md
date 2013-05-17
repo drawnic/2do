@@ -20,7 +20,8 @@ you can watch it working at: http://2do.dev4.webenabled.net/2do.html
 How to make it work
 -------------------
 
-This was requested as an interview test for a company, feel free to use the code in every way you want...
+This was requested as an interview test for a company so surely can be improved but I had to do it quick, 
+feel free to use the code and modify it in every way you want...
 
 To use it, just change the information of the database file "db.php", and create a table (this app uses 
 a table named "task") following the structure showed in the file "database.sch". 
